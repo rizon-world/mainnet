@@ -6,13 +6,13 @@
 
 ```bash
 $ git clone https://github.com/rizon-world/rizon.git && cd rizon
-$ git checkout v0.2.7
+$ git checkout v0.2.8
 $ make install
 ```
 
 ### Setup initial node
 
-If you had setup node, you'd better clean existing configurations.
+If you had setup node, you should clean existing configurations.
 
 ```bash
 # remove old genesis.json file and gentxs
@@ -26,12 +26,15 @@ $ rizond unsafe-reset-all
 And init your node.
 
 ```bash
-$ rizond init <moniker> --chain-id titan-1 
+$ rizond init <moniker> --chain-id titan-1
 ```
 
 ### Prepare validator wallet
+> !!! WARNING !!!
+>
+> After v0.2.8 version, the cointype of RIZON is changed so YOU SHOULD GENERATE NEW WALLET with v0.2.8 version.
 
-Probably you already have your own wallet. If you don't, please refer to [here](https://docs.rizon.world/resource/cli/general#keys) and make one.
+Please refer to [here](https://docs.rizon.world/resource/cli/general#keys) and make one.
 
 ### Create gentx
 
