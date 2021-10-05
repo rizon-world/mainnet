@@ -37,3 +37,7 @@ $ jq -S -c -M '' ~/.rizon/config/genesis.json | shasum -a 256
 ### community peers
 
 - Fill your peers here if you want to provide yours to public.
+
+## Docs
+
+https://docs.rizon.world
