@@ -102,4 +102,3 @@ Now cosmovisor will run with the current binary, and will automatically upgrade 
 ```
 cosmovisor start
 ```
-
