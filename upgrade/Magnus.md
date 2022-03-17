@@ -1,4 +1,6 @@
 
+# Magnus Upgrade Instructions
+
  RIZON Mainnet (a.k.a Titan) 0.3.0 upgrade is expected to happen on ## 2,648,000 block height. 
 Currently, the on-chain governance proposal of #1 has been submitted on March 9. Once this proposal passes, RIZON Titan will be upgrading to mainnet 0.3.0 on ## 2,648,000 block height. 
 
@@ -22,11 +24,12 @@ Currently, the on-chain governance proposal of #1 has been submitted on March 9.
     - fix: store key naming convention
     - fix: remove redundant casting
     - fix: introduce module store key retrieval function
-    
+  
    }
  - fix: Upgrading to v0.44 breaks vested accounts
  - Bump tendermint to [v0.34.15](https://github.com/tendermint/tendermint/releases/tag/v0.34.15). See the [CHANGELOG.md](https://github.com/tendermint/tendermint/blob/v0.34.15/CHANGELOG.md#v0.34.15) for details. 
  - Bump golang prerequisite to 1.17. 
+
 
 # Getting prepared for the upgrade
 ## Install and setup Cosmovisor
