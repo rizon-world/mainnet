@@ -1,3 +1,4 @@
+
 # Magnus Upgrade Instructions
 
  RIZON Mainnet (a.k.a Titan) 0.3.0 upgrade is expected to happen on ## 2,648,000 block height. 
@@ -23,11 +24,13 @@ Currently, the on-chain governance proposal of #1 has been submitted on March 9.
     - fix: store key naming convention
     - fix: remove redundant casting
     - fix: introduce module store key retrieval function
-
+  
    }
  - fix: Upgrading to v0.44 breaks vested accounts
  - Bump tendermint to [v0.34.15](https://github.com/tendermint/tendermint/releases/tag/v0.34.15). See the [CHANGELOG.md](https://github.com/tendermint/tendermint/blob/v0.34.15/CHANGELOG.md#v0.34.15) for details. 
  - Bump golang prerequisite to 1.17. 
+
+
 # Getting prepared for the upgrade
 ## Install and setup Cosmovisor
 
@@ -41,23 +44,18 @@ If you choose to use cosmovisor, please continue with these instructions:
 
 To install Cosmovisor:
 
-```
-git clone https://github.com/cosmos/cosmos-sdk
-cd cosmos-sdk
-git checkout v0.42.9
-make cosmovisor
-cp cosmovisor/cosmovisor $GOPATH/bin/cosmovisor
-cd $HOME
+```sh
+go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0
 ```
 
-After this, you must make the necessary folders for cosmosvisor in your daemon home directory (~/.rizond).
+After this, you must make the necessary folders for cosmosvisor in your daemon home directory (~/.rizon).
 
 ```sh
-mkdir -p ~/.rizond
-mkdir -p ~/.rizond/cosmovisor
-mkdir -p ~/.rizond/cosmovisor/genesis
-mkdir -p ~/.rizond/cosmovisor/genesis/bin
-mkdir -p ~/.rizond/cosmovisor/upgrades
+mkdir -p ~/.rizon
+mkdir -p ~/.rizon/cosmovisor
+mkdir -p ~/.rizon/cosmovisor/genesis
+mkdir -p ~/.rizon/cosmovisor/genesis/bin
+mkdir -p ~/.rizon/cosmovisor/upgrades
 ```
 
 Cosmovisor requires some ENVIRONMENT VARIABLES be set in order to function properly.  We recommend setting these in
@@ -71,7 +69,7 @@ For validators we recommmend setting
 ```
 echo "# Setup Cosmovisor" >> ~/.profile
 echo "export DAEMON_NAME=rizond" >> ~/.profile
-echo "export DAEMON_HOME=$HOME/.rizond" >> ~/.profile
+echo "export DAEMON_HOME=$HOME/.rizon" >> ~/.profile
 echo "export DAEMON_ALLOW_DOWNLOAD_BINARIES=false" >> ~/.profile
 echo "export DAEMON_LOG_BUFFER_SIZE=512" >> ~/.profile
 echo "export DAEMON_RESTART_AFTER_UPGRADE=true" >> ~/.profile

@@ -6,7 +6,7 @@ Yes, it is the Titan!
 
 ### rizon tag
 
-- [v0.2.8](https://github.com/rizon-world/rizon/tree/v0.2.8)
+- [v0.3.0](https://github.com/rizon-world/rizon/tree/v0.3.0)
 
 ### chain-id
 
