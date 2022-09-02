@@ -2,14 +2,16 @@
 
 # Gargantua Upgrade Instructions
 
-RIZON Mainnet (a.k.a Titan) v0.4.0 upgrade is expected to happen on `5,113,000` block height. 
+RIZON Mainnet (a.k.a Titan) v0.4.0 upgrade is expected to happen on `5,113,000` block height.
 Currently, the on-chain governance proposal of #2 has been submitted. Once this proposal passes, Titan will be upgraded.
 
 # Upgrade features
  - Upgrade Cosmos SDK to [v0.45.6](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.45.6). See the [CHANGELOG.md](https://github.com/cosmos/cosmos-sdk/blob/v0.45.6/CHANGELOG.md) for details.
  - Upgrade IBC to [v3.0.0](https://github.com/cosmos/ibc-go/releases/tag/v3.0.0). See the [CHANGELOG.md](https://github.com/cosmos/ibc-go/blob/v3.0.0/CHANGELOG.md) for details.
- - Upgrade tendermint to [v0.34.19](https://github.com/tendermint/tendermint/releases/tag/v0.34.19). See the [CHANGELOG.md](https://github.com/tendermint/tendermint/blob/v0.34.19/CHANGELOG.md#v0.34.19) for details. 
- - Bump golang prerequisite to 1.18. 
+ - Upgrade tendermint to [v0.34.19](https://github.com/tendermint/tendermint/releases/tag/v0.34.19). See the [CHANGELOG.md](https://github.com/tendermint/tendermint/blob/v0.34.19/CHANGELOG.md#v0.34.19) for details.
+ - Add [interchain account](https://github.com/cosmos/ibc-go/tree/main/modules/apps/27-interchain-accounts) (ica) module.
+ - Add migration logs for upgrade process.
+ - Bump golang prerequisite to 1.18.
 
 
 # Getting prepared for the upgrade
@@ -26,7 +28,8 @@ If you choose to use cosmovisor, please continue with these instructions:
 To install Cosmovisor:
 
 ```sh
-go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0
+go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor
+
 ```
 
 After this, you must make the necessary folders for cosmosvisor in your daemon home directory (~/.rizon).
@@ -65,7 +68,7 @@ cp $GOPATH/bin/rizond ~/.rizon/cosmovisor/genesis/bin
 ```
 
 
-# Make new binary for upgrade and run cosmovisor 
+# Make new binary for upgrade and run cosmovisor
 To prepare for the upgrade, you need to create some folders, and build and install the new binary.
 
 ```
