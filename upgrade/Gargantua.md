@@ -2,7 +2,7 @@
 
 # Gargantua Upgrade Instructions
 
-RIZON Mainnet (a.k.a Titan) v0.4.0 upgrade is expected to happen on `5,113,000` block height.
+RIZON Mainnet (a.k.a Titan) v0.4.0 upgrade is expected to happen on `5,113,000` block height ([countdown](https://www.mintscan.io/rizon/blocks/5113000)).
 Currently, the on-chain governance proposal of #2 has been submitted. Once this proposal passes, Titan will be upgraded.
 
 # Upgrade features
