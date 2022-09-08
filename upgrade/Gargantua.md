@@ -1,5 +1,3 @@
-# WIP
-
 # Gargantua Upgrade Instructions
 
 RIZON Mainnet (a.k.a Titan) v0.4.0 upgrade is expected to happen on `5,113,000` block height ([countdown](https://www.mintscan.io/rizon/blocks/5113000)).
@@ -15,6 +13,27 @@ Currently, the on-chain governance proposal of #2 has been submitted. Once this 
 
 
 # Getting prepared for the upgrade
+
+## Upgrade manually
+
+Run `rizond` v0.3.0 till upgrade height 5113000, the node will panic:
+
+```
+ERR UPGRADE "Gargantua" NEEDED at height: 5113000
+panic: UPGRADE "Gargantua" NEEDED at height: 5113000
+```
+
+After stopping the node, install `rizond` v0.4.0 and simply restart node by `rizond start`.
+
+```
+cd $RIZON_SOURCE_DIRECTORY
+
+git checkout v0.4.0
+make install
+
+rizond start
+```
+
 ## Install and setup Cosmovisor
 
 We highly recommend validators use cosmovisor to run their nodes. This will make low-downtime upgrades smoother,
@@ -28,9 +47,11 @@ If you choose to use cosmovisor, please continue with these instructions:
 To install Cosmovisor:
 
 ```sh
-go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor
+go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@latest
 
 ```
+
+You also can use version `v1.0.0` or `v1.1.0`.
 
 After this, you must make the necessary folders for cosmosvisor in your daemon home directory (~/.rizon).
 
