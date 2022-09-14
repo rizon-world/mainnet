@@ -47,11 +47,9 @@ If you choose to use cosmovisor, please continue with these instructions:
 To install Cosmovisor:
 
 ```sh
-go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@latest
+go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0
 
 ```
-
-You also can use version `v1.0.0` or `v1.1.0`.
 
 After this, you must make the necessary folders for cosmosvisor in your daemon home directory (~/.rizon).
 
@@ -61,6 +59,8 @@ mkdir -p ~/.rizon/cosmovisor
 mkdir -p ~/.rizon/cosmovisor/genesis
 mkdir -p ~/.rizon/cosmovisor/genesis/bin
 mkdir -p ~/.rizon/cosmovisor/upgrades
+mkdir -p ~/.rizon/cosmovisor/upgrades/Magnus
+mkdir -p ~/.rizon/cosmovisor/upgrades/Magnus/bin
 ```
 
 Cosmovisor requires some ENVIRONMENT VARIABLES be set in order to function properly.  We recommend setting these in
@@ -86,6 +86,7 @@ You may leave out `UNSAFE_SKIP_BACKUP=true`, however the backup takes a decent a
 Finally, you should copy the current rizond binary into the cosmovisor/genesis folder.
 ```
 cp $GOPATH/bin/rizond ~/.rizon/cosmovisor/genesis/bin
+cp $GOPATH/bin/rizond ~/.rizon/cosmovisor/upgrades/Magnus/bin
 ```
 
 
