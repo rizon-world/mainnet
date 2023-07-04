@@ -4,9 +4,9 @@ Yes, it is the Titan!
 
 ## Quick Information
 
-### rizon tag
+### rizon tag flow
 
-- [v0.3.0](https://github.com/rizon-world/rizon/tree/v0.3.0)
+-  [v0.2.8](https://github.com/rizon-world/rizon/tree/v0.2.8) -> [v0.3.0](https://github.com/rizon-world/rizon/tree/v0.3.0) ->  [v0.4.0](https://github.com/rizon-world/rizon/tree/v0.4.0) ->  [v0.5.0](https://github.com/rizon-world/rizon/tree/v0.5.0)
 
 ### chain-id
 
