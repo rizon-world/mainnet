@@ -1,7 +1,8 @@
 # Nebulae Upgrade Instructions
 
-RIZON Mainnet (a.k.a Titan) Nebulae upgrade is expected to happen on `PLACEHOLDER` block height.
-~~Currently, the on-chain governance proposal of #4 has been submitted. Once this proposal passes, Titan will be upgraded.~~ NOT YET
+RIZON Mainnet Nebulae upgrade is expected to happen on `9,522,000` block height. See [here](https://www.mintscan.io/rizon/blocks/9522000) for the countdown.
+
+Currently, the on-chain governance proposal of [#4](https://www.mintscan.io/rizon/proposals/4) has been submitted. Once this proposal passes, Titan will be upgraded.
 
 # Upgrade features
 - Apply CosmWasm (wasmd [v0.31.0](https://github.com/CosmWasm/wasmd/releases/tag/v0.31.0), wasmvm [v1.2.1](https://github.com/CosmWasm/wasmvm/releases/tag/v1.2.1))
@@ -20,11 +21,11 @@ RIZON Mainnet (a.k.a Titan) Nebulae upgrade is expected to happen on `PLACEHOLDE
 
 ## Upgrade manually
 
-Run `rizond` v0.4.1 till upgrade height `PLACEHOLDER`, the node will panic:
+Run `rizond` v0.4.1 till upgrade height `9,522,000`, the node will panic:
 
 ```
-ERR UPGRADE "Nebulae" NEEDED at height: `PLACEHOLDER`
-panic: UPGRADE "Nebulae" NEEDED at height: `PLACEHOLDER`
+ERR UPGRADE "Nebulae" NEEDED at height: 9522000
+panic: UPGRADE "Nebulae" NEEDED at height: 9522000
 ```
 
 After stopping the node, install `rizond` v0.5.0 and simply restart node by `rizond start`.
