@@ -28,12 +28,12 @@ ERR UPGRADE "Nebulae" NEEDED at height: 9522000
 panic: UPGRADE "Nebulae" NEEDED at height: 9522000
 ```
 
-After stopping the node, install `rizond` v0.5.0 and simply restart node by `rizond start`.
+After stopping the node, install `rizond` v0.5.1 and simply restart node by `rizond start`.
 
 ```
 cd $RIZON_SOURCE_DIRECTORY
 
-git checkout v0.5.0
+git checkout v0.5.1
 make install
 
 rizond start
@@ -105,7 +105,7 @@ mkdir -p ~/.rizon/cosmovisor/upgrades/Nebulae/bin
 
 cd $RIZON_SOURCE_DIRECTORY
 
-git checkout v0.5.0
+git checkout v0.5.1
 make install
 
 cp $GOPATH/bin/rizond ~/.rizon/cosmovisor/upgrades/Nebulae/bin
