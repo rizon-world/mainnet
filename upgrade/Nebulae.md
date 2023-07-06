@@ -6,9 +6,9 @@ Currently, the on-chain governance proposal of [#4](https://www.mintscan.io/rizo
 
 # Upgrade features
 - Apply CosmWasm (wasmd [v0.31.0](https://github.com/CosmWasm/wasmd/releases/tag/v0.31.0), wasmvm [v1.2.1](https://github.com/CosmWasm/wasmvm/releases/tag/v1.2.1))
-- Upgrade Tendermint to Comet BFT [v0.34.28](https://github.com/cometbft/cometbft/releases/tag/v0.34.28)
+- Upgrade Tendermint to Comet BFT [v0.34.29](https://github.com/cometbft/cometbft/releases/tag/v0.34.29)
 - Bump Cosmos SDK to [v0.45.16](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.45.16)
-- Bump IBC Go to [v4.4.1](https://github.com/cosmos/ibc-go/releases/tag/v4.4.1)
+- Bump IBC Go to [v4.4.2](https://github.com/cosmos/ibc-go/releases/tag/v4.4.2)
 - Add modules
   - globalfee
   - packet-forward-middleware
